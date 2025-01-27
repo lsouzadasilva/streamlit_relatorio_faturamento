@@ -36,7 +36,7 @@ tile = col3.container(height=150)
 tile.title(f'Tax 5% \nR$ {tax}')
 tile = col4.container(height=150)
 tile.title(f'Total \nR$ {total}')
-df_filter
+st.dataframe(df_filter, use_container_width=True)
 
 col1_1, col2_2 = st.columns(2)
 
