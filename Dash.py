@@ -29,7 +29,7 @@ tax = df_filter["Tax 5%"].sum()
 
 col1, col2, col3, col4 = st.columns(4)
 tile = col1.container(height=150)
-tile.markdown(f'**Investimento** \nR$ {cogs}')
+tile.title(f'Investimento \nR$ {cogs}')
 tile = col2.container(height=150)
 tile.title(f'Quantidade\n{quantidade}')
 tile = col3.container(height=150)
