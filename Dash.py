@@ -47,7 +47,7 @@ total_2 = total_2.sort_values("Total")
 grafico_1 = px.bar(total_2, x="Product line", y=["Total","Quantity"], text_auto=True ,title="FATURAMENTO E QUANTIDAE POR PRODUTO", color="Product line")
 col1_1.plotly_chart(grafico_1, use_container_width=True)
 
-grafico_2 = px.pie(total_2, values="Total", names="Product line", title="PERCENTUAL POR PRODUTO", color="Product line")
+grafico_2 = px.pie(total_2, values="Total", names="Product line", title="PERCENTUAL POR PRODUTO",hole=0.3, color="Product line")
 col2_2.plotly_chart(grafico_2, use_container_width=True)
 
 st.divider()
