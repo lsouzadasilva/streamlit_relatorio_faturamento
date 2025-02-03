@@ -57,7 +57,8 @@ col3, col4 = st.columns(2)
 pagamento = df_filter.groupby("Payment")[["Quantity","Unit price", "cogs","Tax 5%", "Total", "gross margin percentage"]].sum().reset_index()
 pagamento = pagamento.sort_values("Total")
 
-grafico_3 = px.pie(pagamento, values="Total", names="Payment",hole=0.5, title="DISTRIBUIÇÃO POR FORMA DE PAGAMENTO %")
+grafico_3 = px.pie(pagamento, values="Total", names="Payment", hole=0.5, title="DISTRIBUIÇÃO POR FORMA DE PAGAMENTO %", 
+color="Payment",color_discrete_map={"Cash":"#FFABAB", "Ewallet":"#0068C9", "Credit card":"#83C9FF"})
 col3.plotly_chart(grafico_3, use_container_width=True)
 
 grafico_4 = px.bar(pagamento, x="Payment", y="Total", title="FATURAMENTO POR FORMA DE PAGAMENTO", color="Payment", text_auto=True)
