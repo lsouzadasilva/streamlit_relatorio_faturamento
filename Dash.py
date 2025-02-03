@@ -70,5 +70,6 @@ total_1 = df_filter.groupby("Date")[["Quantity","Unit price", "cogs","Tax 5%", "
 total_1 = total_1.sort_values("Date")
 
 grafico_5 = px.bar(total_1, x="Date", y="Total", text_auto=True, title="FATURAMENTO POR PERIDO")
+grafico_5.update_traces(textfont_size=12, textangle=0, textposition="outside", cliponaxis=False)
 col5.plotly_chart(grafico_5, use_container_width=True)
 
