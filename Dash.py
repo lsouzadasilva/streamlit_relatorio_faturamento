@@ -20,6 +20,9 @@ gender = st.sidebar.selectbox("Genero", df["Gender"].unique())
 tipo_cliente = st.sidebar.selectbox("Tipo cliente", df["Customer type"].unique())
 branch = st.sidebar.selectbox("Branch", df["Branch"].unique())
 df_filter = df[(df["Month"].isin(month)) & (df["Gender"] == gender) & (df["Customer type"] == tipo_cliente) & (df["Branch"] == branch)]
+
+st.divider()
+
 st.sidebar.markdown("Desenvolvido por [Leandro Souza](https://br.linkedin.com/in/leandro-souza-313136190)")
 
 
