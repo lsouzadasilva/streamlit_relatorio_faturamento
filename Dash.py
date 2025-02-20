@@ -7,6 +7,16 @@ st.set_page_config(layout="wide")
 st.header("Visão Geral", divider=True)
 st.sidebar.markdown("Filtros")
 
+# --- Ocult menus ---
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
+
 # Carregando os dados
 df = pd.read_csv("supermarket_sales.csv", sep=";", decimal=",")
 df = df.sort_values("Date")
