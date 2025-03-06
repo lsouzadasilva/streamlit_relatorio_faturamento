@@ -25,7 +25,7 @@ df["Date"] = pd.to_datetime(df["Date"])
 df["Month"] = df["Date"].apply(lambda x: str(x.year) + "-" + str(x.month))
 
 # Filtros
-month = st.sidebar.multiselect("Mês (* Comece selecionando um período)", df["Month"].unique())
+month = st.sidebar.multiselect("Mês (*Selecione um período)", df["Month"].unique())
 gender = st.sidebar.selectbox("Genero", df["Gender"].unique())
 tipo_cliente = st.sidebar.selectbox("Tipo cliente", df["Customer type"].unique())
 branch = st.sidebar.selectbox("Branch", df["Branch"].unique())
