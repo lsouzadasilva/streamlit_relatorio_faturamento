@@ -6,6 +6,7 @@ import plotly.express as px
 st.set_page_config(layout="wide")
 st.header("Visão Geral", divider=True)
 st.sidebar.markdown("Filtros")
+st.sidebar.divider()
 
 # --- Ocult menus ---
 hide_st_style = """
